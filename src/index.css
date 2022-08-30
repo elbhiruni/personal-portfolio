@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+  * {
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #fb923c #d1d5db;
+  }
+
+  /* Custom scrollbar for Chrome, Safari and Opera */
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+  *::-webkit-scrollbar-thumb {
+    @apply bg-orange-400 rounded-[16px];
+  }
+  *::-webkit-scrollbar-track {
+    @apply bg-gray-300;
+  }
+
+  html {
+    font-family: "Roboto", sans-serif;
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-blue-50;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold text-blue-700 sm:text-3xl;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .tag {
+    @apply text-white bg-orange-400 text-[0.6rem] font-medium px-3 py-2 rounded-2xl leading-none select-none;
+  }
+
+  .link-btn {
+    @apply inline-block w-16 text-sm font-medium text-blue-800 text-center p-2 border-2 border-blue-800 rounded-md hover:bg-blue-800 hover:text-white transition-colors duration-300;
+  }
+}
+
+.animate-fadeInDown {
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-name: fadeInDown;
+}
+
+.animate-delay-1s {
+  animation-delay: 1s;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
 }
