@@ -1,4 +1,5 @@
 import Card from "./Card";
+import markdownPreviewer from "../../images/markdown-previewer.webp";
 import ipAddressTracker from "../../images/ip-address-tracker.webp";
 import urlShortening from "../../images/url-shortening.webp";
 import adviceGeneratorApp from "../../images/advice-generator-app.webp";
@@ -9,6 +10,16 @@ export default function Portfolio() {
     <section id="portfolio" className="pt-20 pb-10">
       <h2 className="text-center mb-4 lg:mb-10">Portfolio</h2>
       <div className="flex flex-wrap justify-center gap-8">
+        <Card
+          img={markdownPreviewer}
+          tech={["Vue.js", "Marked.js"]}
+          title="Markdown Previewer"
+          text="Preview markdown on web"
+          link={{
+            live: "https://fcc-markdown-previewer-elbhiruni.vercel.app",
+            source: "https://github.com/elbhiruni/fcc-markdown-previewer",
+          }}
+        />
         <Card
           img={ipAddressTracker}
           tech={["Next.js", "React Leaflet", "Tailwind CSS"]}
