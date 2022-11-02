@@ -1,8 +1,8 @@
 import Card from "./Card";
-import ipAddressTracker from "../../images/ip-address-tracker.png";
-import urlShortening from "../../images/url-shortening.png";
-import adviceGeneratorApp from "../../images/advice-generator-app.png";
-import etchASketch from "../../images/etch-a-sketch.png";
+import ipAddressTracker from "../../images/ip-address-tracker.webp";
+import urlShortening from "../../images/url-shortening.webp";
+import adviceGeneratorApp from "../../images/advice-generator-app.webp";
+import etchASketch from "../../images/etch-a-sketch.webp";
 
 export default function Portfolio() {
   return (
